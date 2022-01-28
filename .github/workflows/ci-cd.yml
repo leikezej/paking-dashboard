@@ -1,11 +1,11 @@
 name: Continuous Integration and Delivery #Name of the workflow
 on:
   push:             #specifies that the jobs in the workflow should run everytime if someone pushes a chane on the MAIN branch
-    branches: [ origin ]
+    branches: [origin]
 
-jobs:   
+jobs:   #ALL the Jobs
   test_and_build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -22,9 +22,9 @@ jobs:
           retention-days: 1
 
   deploy_to_production:
-    if: github.ref == 'refs/heads/origin'
+    if: github.ref == 'refs/heads/main'
     needs: test_and_build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -42,6 +42,3 @@ jobs:
             }}
           channelId: live
           projectId: paking-dashboard
-
-
- 
