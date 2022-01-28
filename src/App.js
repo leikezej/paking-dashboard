@@ -13,7 +13,9 @@ const App = () => {
       <h1 style={{
         color: '#6ec177',
         margin: '0'
-      }}>Coming Soon</h1>
+      }}>
+        Coming Soon
+      </h1>
       <p>PakingAllIn Dashboard</p>
     </div>
   )
