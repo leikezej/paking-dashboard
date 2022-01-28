@@ -1,9 +1,9 @@
-name: Continuous Integration and Delivery #Name of the workflow
+name: Continuous Integration and Delivery 
 on:
-  push:             #specifies that the jobs in the workflow should run everytime if someone pushes a chane on the MAIN branch
-    branches: [origin]
+  push:            
+    branches: [ origin ]
 
-jobs:   #ALL the Jobs
+jobs:  
   test_and_build:
     runs-on: windows-latest
     steps:
@@ -22,7 +22,7 @@ jobs:   #ALL the Jobs
           retention-days: 1
 
   deploy_to_production:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/origin'
     needs: test_and_build
     runs-on: windows-latest
     steps:
