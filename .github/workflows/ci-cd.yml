@@ -1,7 +1,7 @@
 name: Continuous Integration and Delivery 
 on:
   push:           
-    branches:  [main]
+    branches:  [origin, main]
 
 jobs:  
   test_and_build:
