@@ -12,8 +12,8 @@ const App = () => {
       fontFamily: 'roboto'
     }}>
 
-    <img src={logo} alt="Paking Logo" height="20%" />
-
+        <img src={logo} alt="Paking Logo" height="30%" />
+      
       <h1 style={{
         color: '#6ec177',
         margin: '0'
