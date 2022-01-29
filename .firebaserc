@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "paking-dashboard"
-  }
+    "default": "paking-dashboard",
+    "staging": "paking-dashboard-staging-bb46c"
+  },
+  "targets": {}
 }
